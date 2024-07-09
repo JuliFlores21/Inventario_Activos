@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados del Archivo CSV</title>
+</head>
+<body>
+    <h2>Resultados del Archivo CSV</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Tipo</th>
+                <th>Confidencialidad</th>
+                <th>Integridad</th>
+                <th>Disponibilidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for resultado in resultados %}
+            <tr>
+                <td>{{ resultado.nombre }}</td>
+                <td>{{ resultado.descripcion }}</td>
+                <td>{{ resultado.tipo }}</td>
+                <td>{{ resultado.confidencialidad }}</td>
+                <td>{{ resultado.integridad }}</td>
+                <td>{{ resultado.disponibilidad }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
